@@ -12,7 +12,7 @@ textarea { outline: none; border: none; background: none; border-radius: 0;
   background-image: linear-gradient(transparent, transparent);
 }
 textarea { resize: none; }
-html { -webkit-text-size-adjust: none;}
+html { -webkit-text-size-adjust: none; -webkit-user-select: none;}
 article， aside， details， figcaption， figure， footer， header， hgroup， menu， nav， section { display: block; }
 .video embed， .video object， .video iframe { width: 100%; height: auto; }
 a { text-decoration: none; outline: none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
@@ -20,7 +20,7 @@ a { text-decoration: none; outline: none;-webkit-tap-highlight-color: rgba(0,0,0
 .clearfix:before { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-body{min-width:320px; font-family:"Microsoft YaHei", "Arial Black"; color: #fff; background-color: #ffffff;}
+body{min-width:320px; font-family:"Microsoft YaHei", "Arial Black",sans-serif; color: #fff; background-color: #ffffff;}
 
 
 
