@@ -29,6 +29,7 @@ if (winW / winH < desW / desH) {
     oli.addEventListener("touchmove", move, false);
     oli.addEventListener("touchend",end,false);
 });
+
 function start(e) {
     this.touchstart = e.changedTouches[0].pageY;
 }

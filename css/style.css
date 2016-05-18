@@ -18,7 +18,7 @@ html,body{
     display: none;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 60px;
     width: 30px;
     height: 30px;
     background: url("../images/music.svg") no-repeat;
@@ -482,23 +482,21 @@ animation:zoomIn .75s;
     margin:0 auto; height: 37px;
     background-color: #52edc7;
     font: 26px/37px Microsoft Yahei; color: #fff;}
-.a3 div{
+.a3 h3,.a3 .title,.a3 .con{
+    display: none;
     overflow: hidden;
     width: 370px;
     margin:20px auto 0;
-    padding-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #52edc7;
-    background-color: #fff;
-    font: 22px/30px Microsoft Yahei; color: #4a4a4a;
+    font: 22px/30px Microsoft Yahei; color: #fff;
+
 }
-.a3 div h3{
-    margin-top: 10px;font: 22px/58px Microsoft Yahei; color: #000;}
-.a3 div p.title{
+.a3  h3{
+    margin-top: 10px;font: 22px/58px Microsoft Yahei; color: #fff;}
+.a3  p.title{
     width: 100%;
     margin: 0;
     background: none;}
-.a3 div p.con{
+.a3  p.con{
     width: 100%;
     margin-top: 20px;}
 
@@ -507,16 +505,99 @@ animation:zoomIn .75s;
     -webkit-animation:zoomIn .75s;
     animation:zoomIn .75s;
 }
+#a3 h3,#a3 .title,#a3 .con{
+    display: block;
+    -webkit-animation:bounceInLeft .75s;
+    animation:bounceInLeft .75s;
+}
+#a3 .title{-webkit-animation:bounceInLeft 1s;
+    animation:bounceInLeft .95s;}
+#a3 .con{-webkit-animation:bounceInLeft 1.5s;
+    animation:bounceInLeft 1.5s;}
 .a4 h3{
     text-align: center;
-    margin-top: 50px; font: 36px/46px Microsoft Yahei; color: #52edc7; }
+    margin-top: 50px; font: 36px/46px Microsoft Yahei; color: #52edc7;  }
 .a4 div{
+    display: none;
     width: 60%;
     height: 40%;
     margin:20px auto 0; }
 .a4 div img{
     width: 100%;
     height: 100%;}
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+@keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+.flipInY {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInY;
+    animation-name: flipInY;
+}
+
 @-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale3d(1, 1, 1);
@@ -555,3 +636,8 @@ animation:zoomIn .75s;
     -webkit-animation: pulse .5s ;
     animation: pulse .5s ;
     }
+#a4 div {
+    display: block;
+    -webkit-animation: flipInY 1.25s ;
+    animation: flipInY 1.25s ;
+}
